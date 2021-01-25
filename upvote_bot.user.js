@@ -3,8 +3,8 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1.0
 // @description  upvote/downvote first 25 posts on shoppingbay!
-// @updateURL    https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
-// @downloadURL  https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
+// @updateURL    https://raw.githubusercontent.com/MaazaMaaza/Maazamaaza/master/upvote_bot.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaazaMaaza/Maazamaaza/master/upvote_bot.user.js
 // @author       MaazaMaaza
 // @match        https://www.reddit.com/r/shoppingbay/
 // @grant        none
