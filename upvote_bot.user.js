@@ -66,10 +66,10 @@ function upvoteBot(i,n){
 		}
 		i++
 		if(i<n) upvoteBot(i,n)
+		else alert('Done!')
 	},randint(3,4)*1000)
 }
 
 window.addEventListener('load',function(){
 	upvoteBot(0,25)
-	alert('Done voting :)')
 })
