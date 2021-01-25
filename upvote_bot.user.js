@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Upvote Bot
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1
 // @description  try to take over the world!
+// @updateURL    https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
+// @downloadURL  https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
 // @author       MaazaMaaza
-// @match        https://www.reddit.com/r/shoppingbay/
+// @match        htt*://*.reddit.com/r/shoppingbay/
 // @grant        none
 // ==/UserScript==
 
