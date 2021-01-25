@@ -71,4 +71,5 @@ function upvoteBot(i,n){
 
 window.addEventListener('load',function(){
 	upvoteBot(0,25)
+	alert('Done voting :)')
 })
