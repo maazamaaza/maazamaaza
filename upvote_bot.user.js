@@ -19,7 +19,7 @@ function upvote(post){
 		upvoteButton.click();
 		console.log('Upvoted!')
 	}
-	else console.log('Already upvoted')	
+	else console.log('Already upvoted')
 }
 function downvote(post){
 	let downvoteButton=post.querySelectorAll('.voteButton')[1]
@@ -27,7 +27,7 @@ function downvote(post){
 		downvoteButton.click();
 		console.log('Downvoted!')
 	}
-	else console.log('Already downvoted')	
+	else console.log('Already downvoted')
 }
 let randint = (a,b) => Math.floor(Math.random()*(b-a+1)+a)
 
