@@ -2,7 +2,7 @@
 // @name         Upvote Bot
 // @namespace    http://tampermonkey.net/
 // @version      0.1.0
-// @description  try to take over the world!
+// @description  upvote/downvote first 25 posts on shoppingbay!
 // @updateURL    https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
 // @downloadURL  https://github.com/MaazaMaaza/Maazamaaza/raw/master/upvote_bot.user.js
 // @author       MaazaMaaza
