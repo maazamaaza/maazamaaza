@@ -1,8 +1,18 @@
-my_accounts=['u/HarlemShakespeare','u/MaazaMaaza']
+// ==UserScript==
+// @name         Upvote Bot
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       MaazaMaaza
+// @match        https://www.reddit.com/r/shoppingbay/
+// @grant        none
+// ==/UserScript==
+
+let my_accounts=['u/HarlemShakespeare','u/MaazaMaaza']
 // posts=document.querySelectorAll('._1oQyIsiPHYt6nx7VOmd1sz') //enable for manual interaction
-author= (post) => post.querySelector('._2tbHP6ZydRpjI44J3syuqC._23wugcdiaj44hdfugIAlnX.oQctV4n0yUb0uiHDdGnmE')
-title= (post) => post.querySelector('._eYtD2XCVieq6emjKBH3m')
-score= (post) => post.querySelector('._1rZYMD_4xY3gRcSS3p8ODO').textContent
+let author= (post) => post.querySelector('._2tbHP6ZydRpjI44J3syuqC._23wugcdiaj44hdfugIAlnX.oQctV4n0yUb0uiHDdGnmE')
+let title= (post) => post.querySelector('._eYtD2XCVieq6emjKBH3m')
+let score= (post) => post.querySelector('._1rZYMD_4xY3gRcSS3p8ODO').textContent
 function upvote(post){
 	let upvoteButton=post.querySelectorAll('.voteButton')[0]
 	if(upvoteButton.querySelector('span').classList.contains('_3edNsMs0PNfyQYofMNVhsG')) { //not already upvoted
@@ -19,27 +29,27 @@ function downvote(post){
 	}
 	else console.log('Already downvoted')	
 }
-randint = (a,b) => Math.floor(Math.random()*(b-a+1)+a)
+let randint = (a,b) => Math.floor(Math.random()*(b-a+1)+a)
 
 function printPost(post){
 	console.log(author(post).textContent)
 	console.log(title(post).textContent)
-	console.log(post_score)
+	console.log(Number(score(post)))
 }
 
 function upvoteBot(i,n){
 	setTimeout(function() {
 		console.log(`Post ${i}`)
-		posts=document.querySelectorAll('._1oQyIsiPHYt6nx7VOmd1sz')
+		let posts=document.querySelectorAll('._1oQyIsiPHYt6nx7VOmd1sz')
 		if(i>0) posts[i-1].scrollIntoView()
-		post=posts[i]
-		post_score=Number(score(post))
+		let post=posts[i]
+		let post_score=Number(score(post))
 		printPost(post)
 		title(post).textContent=`${i}> ${title(post).textContent}`
 		if(my_accounts.includes(author(post).textContent)) {
 			upvote(post)
 		}
-		else if(Boolean(post_score)){
+		else if(post_score){
 			if(post_score>2){
 				downvote(post)
 			}
@@ -58,4 +68,7 @@ function upvoteBot(i,n){
 		if(i<n) upvoteBot(i,n)
 	},randint(1,2)*1000)
 }
-upvoteBot(0,25)
+
+window.addEventListener('load',function(){
+	upvoteBot(0,25)
+})
