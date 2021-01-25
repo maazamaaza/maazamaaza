@@ -66,7 +66,7 @@ function upvoteBot(i,n){
 		}
 		i++
 		if(i<n) upvoteBot(i,n)
-	},randint(1,2)*1000)
+	},randint(3,4)*1000)
 }
 
 window.addEventListener('load',function(){
